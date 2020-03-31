@@ -1,7 +1,7 @@
 {
   "name": "nextrelease-test",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "dependencies": {
-    "fake-dependency": "^11.2.0"
+    "fake-dependency": "^11.2.1"
   }
 }
