@@ -1,2 +1,2 @@
 # nextrelease-test
-test for nextrelease changelog management
+test for [nextrelease.io](https://nextrelease.io) changelog management.
