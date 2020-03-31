@@ -10,4 +10,7 @@ categories:
       - "bugfix"
       - "bug"
 change-template: "- $TITLE (#$NUMBER)"
-template: "TEST"
+template: |
+  ## 🚀 Features and improvemens
+
+  $CHANGES
