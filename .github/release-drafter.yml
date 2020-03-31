@@ -3,7 +3,7 @@ tag-template: "v$NEXT_PATCH_VERSION"
 categories:
   - title: "🤖 Dependencies"
     labels:
-      - "dependencies"
+      - "dependency"
   - title: "🐞 Bug Fixes"
     labels:
       - "fix"
