@@ -1,4 +1,7 @@
 {
   "name": "nextrelease-test",
   "version": "1.0.0",
+  "dependencies": {
+    "fake-dependency": "^11.2.0"
+  }
 }
