@@ -21,7 +21,7 @@ jobs:
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\/v/}
       - name: Get the release notes
         uses: octokit/request-action@v2.x
-        id: get_release_notes
+        id: get_latest_release
         with:
           route: GET /repos/:repository/releases/latest
           repository: ${{ github.repository }}
