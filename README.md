@@ -1,5 +1,7 @@
 # Release management test
 
+![inappropriate gif](https://media.giphy.com/media/jY4SvxIF62Uik/giphy.gif)
+
 Test for release and changelog management.
 
 This repository is a dry run with multiple branches, PRs and tags to see what configuration can serve our needs.
