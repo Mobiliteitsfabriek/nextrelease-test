@@ -1,14 +1,14 @@
 name-template: "v$NEXT_PATCH_VERSION"
 tag-template: "v$NEXT_PATCH_VERSION"
 categories:
-  - title: "🤖 Dependencies"
-    labels:
-      - "dependency"
   - title: "🐞 Bug Fixes"
     labels:
       - "fix"
       - "bugfix"
       - "bug"
+  - title: "🤖 Dependencies"
+    labels:
+      - "dependency"
 change-template: "- $TITLE (#$NUMBER)"
 template: |
   ## 🚀 Features and improvemens
