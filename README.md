@@ -15,3 +15,11 @@ This branch is the working branch. New commits can only be added via PRs. On arb
 ## release-vX.Y.Z
 
 Branches with this naming convention are used to branch a ready state of staging, bump the version number, create a tag and then merge into master.
+
+## Configuration
+
+The current setup uses the following tools:
+
+- [Release Drafter](https://github.com/release-drafter/release-drafter)
+- [GitHub Actions](https://help.github.com/en/actions)
+- [GitHub Releases](https://help.github.com/en/github/administering-a-repository/managing-releases-in-a-repository)
