@@ -1,4 +1,4 @@
-# Release management test
+# Release management test 🤪
 
 ![inappropriate gif](https://media.giphy.com/media/jY4SvxIF62Uik/giphy.gif)
 
@@ -6,19 +6,19 @@ Test for release and changelog management.
 
 This repository is a dry run with multiple branches, PRs and tags to see what configuration can serve our needs.
 
-## master
+## master 🤪
 
 This branch is the production environment and should always be deployable. Release branches will sync new staging commits to this branch.
 
-## staging
+## staging 🤪
 
 This branch is the working branch. New commits can only be added via PRs. On arbitrary intervals a release is branched from staging to update master.
 
-## release-vX.Y.Z
+## release-vX.Y.Z 🤪
 
 Branches with this naming convention are used to branch a ready state of staging, bump the version number, create a tag and then merge into master.
 
-## Configuration
+## Configuration 🤪
 
 The current setup uses the following tools:
 
