@@ -1,0 +1,29 @@
+name: Release master PR
+
+# This action will trigger whenever a release is created
+on:
+  release:
+    types: [created]
+
+jobs:
+  pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: create-branch
+        uses: peterjgrainger/action-create-branch@v2.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          branch: "release-to-master"
+      - name: pull-request
+        uses: repo-sync/pull-request@v2
+        with:
+          # source_branch: ""                     # If blank, default: triggered branch
+          destination_branch: "master" # If blank, default: master
+          pr_title: "Pulling ${{ github.ref }} into master"
+          pr_body: ":crown: *An automated PR*" # Full markdown support, requires pr_title to be set
+          pr_reviewer: "isilher" # Comma-separated list (no spaces)
+          pr_assignee: "isilher" # Comma-separated list (no spaces)
+          # pr_label: "auto-pr"                   # Comma-separated list (no spaces)
+          # pr_milestone: "Milestone 1"           # Milestone name
+          github_token: ${{ secrets.GITHUB_TOKEN }}
