@@ -16,12 +16,15 @@ jobs:
         with:
           branch: "release-to-master"
       - uses: actions/checkout@v1
+      - name: Get the version
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
           source_branch: "release-to-master"
           destination_branch: "master"
-          pr_title: "Pulling ${{ github.ref }} into master"
+          pr_title: "Release ${{ steps.get_version.outputs.VERSION }}"
           pr_body: ":crown: *An automated PR*" # Full markdown support, requires pr_title to be set
           pr_reviewer: "isilher" # Comma-separated list (no spaces)
           pr_assignee: "isilher" # Comma-separated list (no spaces)
