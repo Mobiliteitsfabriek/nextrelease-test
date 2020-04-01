@@ -49,4 +49,4 @@ jobs:
             >
             > Heb je vragen of opmerkingen? Neem contact op met klantenservice@reisbalans.nl.
 
-            ${{ steps.get_latest_release.outputs.data.body }}
+            ${{ jq -r '.body' steps.get_latest_release.outputs.data }}
