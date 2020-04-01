@@ -3,7 +3,7 @@ name: Release master PR
 # This action will trigger whenever a release is created
 on:
   release:
-    types: [created]
+    types: [published]
 
 jobs:
   pull-request:
