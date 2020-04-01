@@ -1,8 +1,8 @@
-# nextrelease-test 🐠
+# Release management test
 
-Test for [nextrelease.io](https://nextrelease.io) changelog management.
+Test for release and changelog management.
 
-This repository is a dry run with multiple branches, PRs and tags to see if nextrelease can serve our needs.
+This repository is a dry run with multiple branches, PRs and tags to see what configuration can serve our needs.
 
 ## master
 
