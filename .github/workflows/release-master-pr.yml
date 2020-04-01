@@ -29,9 +29,11 @@ jobs:
           pr_assignee: "isilher" # Comma-separated list (no spaces)
           github_token: ${{ secrets.GITHUB_TOKEN }}
           pr_body: |
-            # Release v${{ steps.get_version.outputs.VERSION }}
+            # 🚀 Release v${{ steps.get_version.outputs.VERSION }}
 
-            ## Release notes
+            ![replace me](https://media.giphy.com/media/sxa1AkXeI95a8/giphy.gif)
+
+            ## 📝 Release notes
 
             > We blijven hard werken aan de app! Wat is er nieuw in deze versie (${{ steps.get_version.outputs.VERSION }})?
             >
