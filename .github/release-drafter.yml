@@ -11,6 +11,6 @@ categories:
       - "dependency"
 change-template: "- $TITLE (#$NUMBER)"
 template: |
-  ## 🚀 Features and improvemens
+  ## 🚀 Features and improvements
 
   $CHANGES
