@@ -19,6 +19,14 @@ jobs:
       - name: Get the version
         id: get_version
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\/v/}
+      - name: Get the release notes
+        uses: octokit/request-action@v2.x
+        id: get_release_notes
+        with:
+          route: GET /repos/:repository/releases/tag/v${{ steps.get_version.outputs.VERSION }}
+          repository: ${{ github.repository }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
@@ -40,3 +48,5 @@ jobs:
             > - Er zijn wat kleine bugs opgelost. 🐞
             >
             > Heb je vragen of opmerkingen? Neem contact op met klantenservice@reisbalans.nl.
+
+            ${{ steps.get_latest_release.outputs.data }}
