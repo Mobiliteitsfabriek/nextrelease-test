@@ -19,19 +19,18 @@ jobs:
       - name: Get the version
         id: get_version
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\/v/}
-      - name: Get the release notes
-        uses: octokit/request-action@v2.x
-        id: get_latest_release
-        with:
-          route: GET /repos/:repository/releases/latest
-          repository: ${{ github.repository }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Get the release note
         id: get_release_note
-        run: |
-          sudo apt-get install jq
-          echo ::set-output name=BODY::${jq -r .body steps.get_latest_release.outputs.data}
+        uses: actions/github-script@0.9.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const latestRelease = await github.repos.getLatestRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            })
+            console.log('release RESULT', latestRelease)
+            return latestRelease
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
@@ -54,4 +53,4 @@ jobs:
             >
             > Heb je vragen of opmerkingen? Neem contact op met klantenservice@reisbalans.nl.
 
-            ${{ steps.get_release_note.outputs.BODY }}
+            ${{ steps.get_release_note.outputs }}
