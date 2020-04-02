@@ -24,6 +24,7 @@ jobs:
         uses: actions/github-script@0.9.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          result-encoding: string
           script: |
             const latestRelease = await github.repos.getLatestRelease({
               owner: context.repo.owner,
