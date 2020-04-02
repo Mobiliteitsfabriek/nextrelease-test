@@ -31,7 +31,7 @@ jobs:
             })
             console.log('RELEASE', latestRelease)
             console.log('RELEASE.DATA', latestRelease.data)
-            return latestRelease.data
+            return latestRelease
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
@@ -54,4 +54,10 @@ jobs:
             >
             > Heb je vragen of opmerkingen? Neem contact op met klantenservice@reisbalans.nl.
 
-            ${{ steps.get_latest_release.outputs.body }}
+            ${{ steps.get_latest_release.outpust.data.body }}
+
+            ${{ steps.get_latest_release.outputs.data }}
+
+            ${{ steps.get_latest_release.outputs }}
+
+            FOOTER
