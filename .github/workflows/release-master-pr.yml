@@ -19,8 +19,8 @@ jobs:
       - name: Get the version
         id: get_version
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\/v/}
-      - name: Get the latest release
-        id: get_latest_release
+      - name: Get the latest release notes
+        id: get_latest_release_notes
         uses: actions/github-script@0.9.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -29,9 +29,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
             })
-            console.log('RELEASE', latestRelease)
-            console.log('RELEASE.DATA', latestRelease.data)
-            return latestRelease
+            return latestRelease.data.body
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
@@ -54,10 +52,4 @@ jobs:
             >
             > Heb je vragen of opmerkingen? Neem contact op met klantenservice@reisbalans.nl.
 
-            ${{ steps.get_latest_release.outpust.data.body }}
-
-            ${{ steps.get_latest_release.outputs.data }}
-
-            ${{ steps.get_latest_release.outputs }}
-
-            FOOTER
+            ${{ steps.get_latest_release_notes.outputs }}
