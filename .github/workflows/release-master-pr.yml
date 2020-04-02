@@ -29,6 +29,8 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
             })
+            console.log('RELEASE', latestRelease)
+            console.log('RELEASE.DATA', latestRelease.data)
             return latestRelease.data
       - name: pull-request
         uses: repo-sync/pull-request@v2
