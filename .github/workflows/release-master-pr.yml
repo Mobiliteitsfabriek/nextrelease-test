@@ -27,6 +27,11 @@ jobs:
           repository: ${{ github.repository }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Get the release note
+        id: get_release_note
+        run: |
+          sudo apt-get install jq
+          echo ::set-output name=BODY::${jq -r .body steps.get_latest_release.outputs.data}
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
@@ -49,4 +54,4 @@ jobs:
             >
             > Heb je vragen of opmerkingen? Neem contact op met klantenservice@reisbalans.nl.
 
-            ${{ steps.get_latest_release.outputs.data }}
+            ${{ steps.get_release_note.outputs.BODY }}
