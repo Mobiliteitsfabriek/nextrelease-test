@@ -2,7 +2,7 @@
 
 This repository is a playground with multiple branches, PRs and tags to test out the release flow. You can play around by creating PRs to staging and publishing release drafts.
 
-## Release flow
+## 🌊 Release flow
 
 ### Adding changes
 
@@ -25,7 +25,7 @@ This repository is a playground with multiple branches, PRs and tags to test out
 
 Note that it is assumed a release is always merged into master. Should a release PR be closed without merging, the next one will not include all changes but just those from the latest release. (For example when a patch is requested on reviewing the release PR). In this case you should manually add a link to the other included release(s) in the PR body.
 
-## Branches
+## 🎋 Branches
 
 ### master
 
@@ -39,7 +39,7 @@ This branch is the working branch. New commits can only be added via PRs. On arb
 
 This branch is automatically generated when a release draft is published. It is branched from that release tag and set to be merged into master.
 
-## Configuration
+## ⚙️ Configuration
 
 The current setup uses the following tools:
 
