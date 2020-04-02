@@ -4,6 +4,9 @@
   "scripts": {
     "bump:patch": "yarn version --patch --no-git-tag-version",
     "bump:minor": "yarn version --minor --no-git-tag-version",
-    "bump:major": "yarn version --major --no-git-tag-version"
+    "bump:major": "yarn version --major --no-git-tag-version",
+    "postversion": "yarn release-drafter:update-name-template && yarn release-drafter:update-tag-template",
+    "release-drafter:update-name-template": "sed -e \"1s/.*/name-template: \\\"v$npm_package_version\\\"/\" -i '' .github/release-drafter.yml",
+    "release-drafter:update-tag-template": "sed -e \"2s/.*/tag-template: \\\"v$npm_package_version\\\"/\" -i '' .github/release-drafter.yml"
   }
 }
