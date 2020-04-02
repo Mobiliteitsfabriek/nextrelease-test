@@ -53,4 +53,4 @@ jobs:
             >
             > Heb je vragen of opmerkingen? Neem contact op met klantenservice@reisbalans.nl.
 
-            ${{ steps.get_latest_release_notes.outputs }}
+            ${{ steps.get_latest_release_notes.outputs.result }}
