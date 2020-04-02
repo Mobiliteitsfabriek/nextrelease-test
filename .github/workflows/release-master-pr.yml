@@ -37,8 +37,8 @@ jobs:
           source_branch: "release-to-master"
           destination_branch: "master"
           pr_title: "Release v${{ steps.get_version.outputs.VERSION }}"
-          pr_reviewer: "isilher" # Comma-separated list (no spaces)
-          pr_assignee: "isilher" # Comma-separated list (no spaces)
+          # pr_reviewer: "isilher" # Comma-separated list (no spaces)
+          # pr_assignee: "isilher" # Comma-separated list (no spaces)
           github_token: ${{ secrets.GITHUB_TOKEN }}
           pr_body: |
             # 🚀 Release v${{ steps.get_version.outputs.VERSION }}
