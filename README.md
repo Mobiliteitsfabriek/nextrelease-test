@@ -23,7 +23,7 @@ This repository is a playground with multiple branches, PRs and tags to test out
 1. Click 'Edit', then 'Publish release'. A [GitHub action](.github/workflow/release-master-pr.yml) will kick off.
 1. Wait a little for the action to finish, then check the PR to master that was created.
 
-Note that it is assumed a release is always merged into master. Should a release PR be closed without merging, the next one will not include all changes but just those from the latest release. (For example when a patch is requested on reviewing the release PR). In this case you should manually add a link to the other included release(s) in the PR body.
+Note that it is assumed a release is always merged into master. Should a release PR be closed without merging, the next one will not include all changes but just those from the latest release. (For example when a patch is requested on reviewing the release PR). In this case you should manually add a link to the other included release(s) in the PR body..
 
 ## 🎋 Branches
 
