@@ -35,9 +35,9 @@ This branch is the production environment and should always be deployable.
 
 This branch is the working branch. New commits can only be added via PRs. On arbitrary intervals a release is branched from staging.
 
-### release-to-master
+### master-release-vX.Y.Z
 
-This branch is automatically generated when a release draft is published. It is branched from that release tag and set to be merged into master.
+A branch with this naming pattern is automatically generated when a release draft is published. It is branched from that release tag and set to be merged into master.
 
 ## ⚙️ Configuration
 
