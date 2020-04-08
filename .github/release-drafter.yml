@@ -1,5 +1,5 @@
-name-template: "v1.7.1"
-tag-template: "v1.7.1"
+name-template: "v1.8.1"
+tag-template: "v1.8.1"
 categories:
   - title: "🐞 Bug Fixes"
     labels:
