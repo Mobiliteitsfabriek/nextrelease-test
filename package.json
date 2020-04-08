@@ -1,6 +1,6 @@
 {
   "name": "nextrelease-test",
-  "version": "1.6.0",
+  "version": "1.7.1",
   "scripts": {
     "bump:patch": "yarn version --patch --no-git-tag-version",
     "bump:minor": "yarn version --minor --no-git-tag-version",
